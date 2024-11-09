@@ -1,0 +1,40 @@
+/* desktop.less */
+@media (min-width: 768px) {
+	.sections{
+		&.nav-sections {
+			display: none;
+		}
+	}
+	.navigation {
+		width: auto;
+		display: inline-block;
+		padding: 0 0 0 4rem;
+		background: none;
+	}
+	.logo {
+		margin: 0;
+	}
+	.header {
+		&.content {
+			padding: 10px 20px 0;
+		}
+	}
+	.block-search {
+		.label {
+			overflow: visible!important;
+			right: 25px;
+			cursor: pointer;
+			top: 4px;
+			position: relative;
+		}
+	}
+	.block-search {
+		.control, .actions {
+			display: none;
+			position: absolute;
+			width: 250px;
+			right: 0;
+		}
+	}
+
+}

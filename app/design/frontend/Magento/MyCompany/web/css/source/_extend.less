@@ -1,0 +1,751 @@
+/* _extend.less */
+
+@padding-small: 10px;
+@padding-medium: 15px;
+@icon-size: 24px;
+@color-border: #e5e5e5;
+@color-bg-dark: #000000;
+@color-scrollbar-thumb: #555;
+@color-scrollbar-track: #f5f5f5;
+@icon-url-path: "../images/";
+
+//
+//  Font load : Helvetica Now Text
+//  _____________________________________________
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-BlackItalic.eot");
+  src: local("Helvetica Now Text  Black Ita"),
+    local("HelveticaNowText-BlackItalic"),
+    url("../fonts/HelveticaNowText-BlackItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-BlackItalic.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-BlackItalic.woff") format("woff"),
+    url("../fonts/HelveticaNowText-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-ExtBdIta.eot");
+  src: local("Helvetica Now Text  ExtBd Ita"),
+    local("HelveticaNowText-ExtBdIta"),
+    url("../fonts/HelveticaNowText-ExtBdIta.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-ExtBdIta.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-ExtBdIta.woff") format("woff"),
+    url("../fonts/HelveticaNowText-ExtBdIta.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-Black.eot");
+  src: local("Helvetica Now Text  Black"), local("HelveticaNowText-Black"),
+    url("../fonts/HelveticaNowText-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-Black.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-Black.woff") format("woff"),
+    url("../fonts/HelveticaNowText-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-BoldItalic.eot");
+  src: local("Helvetica Now Text  Bold Italic"),
+    local("HelveticaNowText-BoldItalic"),
+    url("../fonts/HelveticaNowText-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-BoldItalic.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-BoldItalic.woff") format("woff"),
+    url("../fonts/HelveticaNowText-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-Bold.eot");
+  src: local("Helvetica Now Text  Bold"), local("HelveticaNowText-Bold"),
+    url("../fonts/HelveticaNowText-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-Bold.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-Bold.woff") format("woff"),
+    url("../fonts/HelveticaNowText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-RegIta.eot");
+  src: local("Helvetica Now Text  Reg Ita"), local("HelveticaNowText-RegIta"),
+    url("../fonts/HelveticaNowText-RegIta.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-RegIta.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-RegIta.woff") format("woff"),
+    url("../fonts/HelveticaNowText-RegIta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-ExtLtIta.eot");
+  src: local("Helvetica Now Text  ExtLt Ita"),
+    local("HelveticaNowText-ExtLtIta"),
+    url("../fonts/HelveticaNowText-ExtLtIta.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-ExtLtIta.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-ExtLtIta.woff") format("woff"),
+    url("../fonts/HelveticaNowText-ExtLtIta.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-Thin.eot");
+  src: local("Helvetica Now Text  Thin"), local("HelveticaNowText-Thin"),
+    url("../fonts/HelveticaNowText-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-Thin.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-Thin.woff") format("woff"),
+    url("../fonts/HelveticaNowText-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-ExtraLight.eot");
+  src: local("Helvetica Now Text  Extra Light"),
+    local("HelveticaNowText-ExtraLight"),
+    url("../fonts/HelveticaNowText-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-ExtraLight.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-ExtraLight.woff") format("woff"),
+    url("../fonts/HelveticaNowText-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-Light.eot");
+  src: local("Helvetica Now Text  Light"), local("HelveticaNowText-Light"),
+    url("../fonts/HelveticaNowText-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-Light.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-Light.woff") format("woff"),
+    url("../fonts/HelveticaNowText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-ExtraBold.eot");
+  src: local("Helvetica Now Text  Extra Bold"),
+    local("HelveticaNowText-ExtraBold"),
+    url("../fonts/HelveticaNowText-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-ExtraBold.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-ExtraBold.woff") format("woff"),
+    url("../fonts/HelveticaNowText-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-MediumItalic.eot");
+  src: local("Helvetica Now Text  Med Ita"),
+    local("HelveticaNowText-MediumItalic"),
+    url("../fonts/HelveticaNowText-MediumItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-MediumItalic.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-MediumItalic.woff") format("woff"),
+    url("../fonts/HelveticaNowText-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-Regular.eot");
+  src: local("Helvetica Now Text  Regular"), local("HelveticaNowText-Regular"),
+    url("../fonts/HelveticaNowText-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-Regular.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-Regular.woff") format("woff"),
+    url("../fonts/HelveticaNowText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-LightItalic.eot");
+  src: local("Helvetica Now Text  Light Ita"),
+    local("HelveticaNowText-LightItalic"),
+    url("../fonts/HelveticaNowText-LightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-LightItalic.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-LightItalic.woff") format("woff"),
+    url("../fonts/HelveticaNowText-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-ThinItalic.eot");
+  src: local("Helvetica Now Text  Thin Italic"),
+    local("HelveticaNowText-ThinItalic"),
+    url("../fonts/HelveticaNowText-ThinItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-ThinItalic.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-ThinItalic.woff") format("woff"),
+    url("../fonts/HelveticaNowText-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Now Text";
+  src: url("../fonts/HelveticaNowText-Medium.eot");
+  src: local("Helvetica Now Text  Medium"), local("HelveticaNowText-Medium"),
+    url("../fonts/HelveticaNowText-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HelveticaNowText-Medium.woff2") format("woff2"),
+    url("../fonts/HelveticaNowText-Medium.woff") format("woff"),
+    url("../fonts/HelveticaNowText-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  font-family: "Helvetica Now Text", sans-serif;
+}
+
+body {
+  font-family: "Helvetica Now Text", sans-serif;
+  color: #000;
+}
+
+// Desktop styles
+@media (min-width: 768px) {
+  .sections {
+    &.nav-sections {
+      display: none;
+    }
+  }
+  .navigation {
+    width: auto;
+    display: inline-block;
+    padding: 0 0 0 4rem;
+    background: none;
+  }
+  .header {
+    &.content {
+      padding: 10px 20px 0;
+    }
+  }
+  .block-search {
+    .label {
+      overflow: visible !important;
+      right: 25px;
+      cursor: pointer;
+      top: 4px;
+      position: relative;
+    }
+  }
+  .block-search {
+    .control,
+    .actions {
+      display: none;
+      position: absolute;
+      width: 250px;
+      right: 0;
+    }
+  }
+  .logo {
+    img {
+      max-height: inherit;
+      padding: 15px 0 15px 0;
+    }
+    margin: 0 !important;
+  }
+
+  .page-header {
+    .panel.wrapper {
+      display: none;
+    }
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .header.content {
+    padding: 10px 20px 10px !important;
+  }
+
+  .navigation {
+    background: none !important;
+    width: auto !important;
+    display: inline-block;
+    margin-left: 4rem !important;
+  }
+
+  .block.block-search {
+    width: auto;
+    margin-top: 4px;
+  }
+
+  .minicart-wrapper {
+    margin-top: 11px;
+  }
+
+  .block-search {
+    .label {
+      overflow: visible !important;
+      right: 25px !important;
+      cursor: pointer !important;
+      top: 4px !important;
+      position: relative !important;
+    }
+
+    .form.minisearch.active {
+      .label {
+        display: none;
+      }
+
+      .control,
+      .actions {
+        display: block;
+      }
+    }
+  }
+
+  .page-header {
+    .account-header {
+      float: right;
+      display: inline-block;
+      margin-left: 13px;
+      margin-top: 6px;
+    }
+  }
+
+  .catalog-product-view {
+    .product-main-section {
+      display: flex;
+      justify-content: space-between;
+
+      .product.media {
+        width: 550px;
+        max-width: 100%;
+        position: relative;
+
+        .gallery-placeholder {
+          overflow-x: hidden;
+          overflow-y: hidden;
+          height: ~"calc(100vh - 90px)";
+          box-sizing: content-box;
+          padding-right: 10px;
+
+          .item {
+            &:nth-child(2),
+            &:nth-child(3) {
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      .product-info-main {
+        width: 300px;
+        max-width: 100%;
+      }
+      .product {
+        &.data {
+          &.items {
+            > .item {
+              &.title {
+                &:nth-of-type(1) {
+                  > .switch {
+                    padding-left: 0 !important;
+                  }
+                }
+              }
+
+              &.content {
+                padding: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .product.info.detailed {
+      width: 450px;
+    }
+  }
+
+  .gallery-images {
+    width: 100%;
+    height: 99%;
+    overflow: auto;
+    padding-right: 20px;
+
+    &.owl-carousel {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &.scroll {
+      padding-right: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: #000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #555;
+    }
+  }
+  .product-main-bottom-section {
+    .editor-note {
+      p:nth-of-type(2) {
+        font-size: 32px;
+        width: 900px;
+        margin: 1rem auto;
+      }
+    }
+  }
+}
+
+// mobile css
+@media (max-width: 768px) {
+  .account-header {
+    display: none;
+  }
+
+  .header.content {
+    .navigation {
+      display: none;
+    }
+  }
+
+  .logo {
+    margin: 17px 0 17px 40px !important;
+  }
+
+  .minicart-wrapper {
+    margin-top: 14px !important;
+  }
+
+  .catalog-product-view {
+    .product-main-section {
+      display: flex;
+      flex-direction: column;
+
+      .product.media {
+        -ms-flex-order: -1;
+        -webkit-order: -1;
+        order: -1;
+
+        .owl-theme .owl-dots .owl-dot {
+          span {
+            width: 16px;
+            height: 2px;
+          }
+          &.active span {
+            background: #000;
+          }
+        }
+      }
+
+      .product-info-main {
+        -ms-flex-order: -1;
+        -webkit-order: -1;
+        order: -1;
+        width: 100%;
+        margin-top: 2rem;
+      }
+      .product {
+        &.data {
+          &.items {
+            > .item {
+              &.content {
+                padding: 10px 15px 0px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-toggle {
+    right: 15px;
+    left: auto;
+    top: 28px;
+  }
+
+  .logo {
+    margin: 17px 0 17px 0px !important;
+  }
+
+  .page-header {
+    .minicart-wrapper {
+      margin-right: 40px;
+    }
+  }
+}
+
+// common css
+.page-header {
+  .block-search {
+    .label:before {
+      background-image: url("../images/search-icon.png");
+      background-repeat: no-repeat;
+      content: "";
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  .minicart-wrapper {
+    .action.showcart:before {
+      background-image: url("../images/cart-icon.png");
+      background-repeat: no-repeat;
+      content: "";
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  .nav-toggle:before {
+    background-image: url("../images/menu-toggle-icon.png");
+    background-repeat: no-repeat;
+    content: "";
+    height: 25px;
+    width: 25px;
+  }
+
+  .account-header {
+    .account-icon {
+      display: inline-block;
+      content: "";
+      background-image: url("../images/account-icon.png");
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 24px;
+      cursor: pointer;
+    }
+  }
+  .navigation {
+    font-weight: 500 !important;
+
+    li {
+      a {
+        text-transform: uppercase;
+        color: #000 !important;
+      }
+    }
+  }
+}
+
+.catalog-product-view {
+  .product-main-section {
+    .product {
+      &.data {
+        &.items {
+          > .item {
+            &.title {
+              > .switch {
+                background: none !important;
+                padding: 1px 10px 1px 10px !important;
+                border: none !important;
+                font-weight: 700 !important;
+                color: #767676 !important;
+                text-transform: uppercase;
+              }
+
+              &.active {
+                > .switch {
+                  border-bottom: 3px solid;
+                  color: #000 !important;
+                }
+              }
+            }
+
+            &.content {
+              border: none !important;
+            }
+          }
+        }
+      }
+    }
+    .product.media {
+      a.action.towishlist {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        right: 24px;
+        background-image: url("../images/wishlist-icon.png");
+        z-index: 11;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .product-info-main {
+      .product-add-form {
+        padding-top: 0 !important;
+      }
+      .swatch-attribute {
+        .swatch-option.text {
+          border: 1px solid #e5e5e5;
+          border-radius: 100px;
+          font-family: "Helvetica Now Text";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 13px;
+          text-align: center;
+          height: 12px;
+          width: 46px;
+          background-color: transparent;
+          color: #000000;
+          margin-right: 3px;
+        }
+      }
+
+      .product-options-bottom {
+        button.action.primary.tocart {
+          width: 100%;
+          height: 48px;
+          border-radius: 100px;
+          border: 1px solid #000000;
+          background-color: #000000;
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+      #product-addtocart-button {
+        height: 40px !important;
+        text-transform: uppercase;
+        font-size: 14px !important;
+        font-weight: 400;
+
+        span:after {
+          background-image: url("../images/right-icon.png");
+          background-repeat: no-repeat;
+          content: "";
+          height: 25px;
+          width: 25px;
+          display: inline-block;
+          margin-left: 18px;
+          margin-top: 12px;
+          vertical-align: middle;
+        }
+      }
+      .product-info-price {
+        border: none;
+        margin-bottom: 0 !important;
+
+        .price-box {
+          padding-bottom: 0 !important;
+          .price-container {
+            .price {
+              font-size: 18px !important;
+            }
+          }
+        }
+      }
+
+      .page-title-wrapper {
+        h1 {
+          margin-bottom: 0 !important;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+      .product-info-message {
+        p,
+        a {
+          color: #000;
+        }
+      }
+      .swatch-option {
+        &.text {
+          &.selected {
+            background-color: #000 !important;
+            color: #fff !important;
+            border-color: #000 !important;
+            outline: 2px solid #000 !important;
+          }
+        }
+      }
+      .swatch-attribute-label {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .product-main-bottom-section {
+    .view-more-like-this {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #000;
+      padding: 10px 0 20px 0;
+
+      a {
+        color: #000;
+        padding: 0px 8px 0 8px;
+      }
+    }
+    .editor-note {
+      text-align: center;
+
+      p:nth-of-type(1) {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+    .line {
+      position: relative;
+      display: inline-block;
+      padding-left: 38px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 1.5px;
+        background-color: #000;
+      }
+    }
+  }
+}
