@@ -29,4 +29,7 @@ bin/magento cache:clean
 
 The custom theme and static blocks should now be visible on the frontend.
 
+Additional Notes
+- This project has been tested on Magento 2.4.7-p2 version with sample data.
+
 
